@@ -1,0 +1,15 @@
+# Code coverage
+.nyc_output
+coverage
+
+# Dependencies
+node_modules
+
+# User-specific environment vars
+.env
+
+# Output builds
+dist
+
+# Run cache
+.runcache
