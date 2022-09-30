@@ -15,9 +15,7 @@
     "test": "env LIB=lib mocha",
     "test:cover": "env LIB=lib env COVER=1 nyc --clean=${CLEAN:=true} -r=text -r=lcovonly -x=test/** mocha",
     "test:node": "webpack && env LIB=dist/run.node.min.js env MANGLED=1 mocha",
-    "test:browser": "node test/env/browser",
-    "version": "standard && webpack && npm run test:node",
-    "bump": "npm version patch && git push --follow-tags && npm publish"
+    "test:browser": "node test/env/browser"
   },
   "dependencies": {
     "bsv": "^1.5.6"

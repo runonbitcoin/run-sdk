@@ -1,10 +1,26 @@
-## This project is no longer supported. The repository exists for reference only.
-
----
-
-# Run
+# RUN SDK - 0.6.41 beta
 
 [![tests](https://github.com/runonbitcoin/run/workflows/tests/badge.svg)](https://github.com/runonbitcoin/run/actions) [![codecov](https://codecov.io/gh/runonbitcoin/run/branch/master/graph/badge.svg?token=VPXTBV9CQP)](https://codecov.io/gh/runonbitcoin/run)
+
+**Note: This project is no longer supported. The repository exists for reference only.**
+
+RUN is a token protocol to build whatever you dream up. A world of interactive apps and tokens.
+
+To give it a go, visit https://run.network for tutorials and docs.
+
+## Installation
+
+Run `npm install` to install node dependencies.
+
+Then run `npm run build` to build the browser and node libraries.
+
+## Community
+
+Join us in our Discord, Run Nation: https://run.network/discord. Here you'll meet other developers using Run, hear about cool projects launching, and know right away when there are new announcements.
+
+## Getting Help
+
+Post what's on your mind in the "ask-for-help" channel in the Run Nation Discord.
 
 ## Commands
 
@@ -14,8 +30,6 @@
 - `npm run test:node` - Test the minified node build
 - `npm run test:browser` - Test the minified browser build (Chrome default)
 - `npm run test:cover` - Collect code coverage
-- `npm run deploy` - Redeploy extras to the blockchain
-- `npm run bump` - Create a new patch release
 - `npm run test test/plugins/local-purse.js` - Run just the purse tests
 
 ## Configuring the tests
