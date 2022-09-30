@@ -41,6 +41,7 @@ jobs:
         STRESS: true
       
     - name: RunConnect Testnet Tests
+      if: false
       run:
         npm run test:cover test/kernel/blockchain.js
       env: 
@@ -51,6 +52,7 @@ jobs:
         PURSE_TEST: ${{ secrets.PURSE_TESTNET }}
 
     - name: RunConnect Mainnet Tests
+      if: false
       run:
         npm run test:cover test/kernel/blockchain.js
       env: 
@@ -61,6 +63,7 @@ jobs:
       continue-on-error: true
       
     - name: WhatsOnChain Testnet Tests
+      if: false
       run:
         npm run test:cover test/kernel/blockchain.js
       env: 
@@ -71,6 +74,7 @@ jobs:
         PURSE_TEST: ${{ secrets.PURSE_TESTNET2 }}
 
     - name: PayServer Testnet Tests
+      if: false
       run:
         npm run test:cover test/plugins/pay-server.js
       env: 
@@ -79,6 +83,7 @@ jobs:
         CLEAN: false
 
     - name: StateServer Mainnet Tests
+      if: false
       run:
         npm run test:cover test/plugins/state-server.js
       env: 
