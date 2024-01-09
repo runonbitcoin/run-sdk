@@ -161,24 +161,24 @@ const browserMin = {
   stats: 'errors-only'
 }
 
-// ------------------------------------------------------------------------------------------------
-// Node Minified
-// ------------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------------
+// // Node Minified
+// // ------------------------------------------------------------------------------------------------
 
-const nodeMin = {
-  ...browserMin,
-  target: 'node',
-  output: {
-    filename: `${name}.node.min.js`,
-    path: dist,
-    libraryTarget: 'commonjs2'
-  },
-  resolve: {
-    mainFields: ['main', 'module'],
-    extensions: ['.js', '.mjs', '.wasm', '.json']
-  },
-  plugins: [version, nodeVariant, new SaveNameCachePlugin()]
-}
+// const nodeMin = {
+//   ...browserMin,
+//   target: 'node',
+//   output: {
+//     filename: `${name}.node.min.js`,
+//     path: dist,
+//     libraryTarget: 'commonjs2'
+//   },
+//   resolve: {
+//     mainFields: ['main', 'module'],
+//     extensions: ['.js', '.mjs', '.wasm', '.json']
+//   },
+//   plugins: [version, nodeVariant, new SaveNameCachePlugin()]
+// }
 
 // ------------------------------------------------------------------------------------------------
 // Browser Original
@@ -195,20 +195,20 @@ const browser = {
   optimization: { minimize: false }
 }
 
-// ------------------------------------------------------------------------------------------------
-// Node Original
-// ------------------------------------------------------------------------------------------------
+// // ------------------------------------------------------------------------------------------------
+// // Node Original
+// // ------------------------------------------------------------------------------------------------
 
-const node = {
-  ...nodeMin,
-  output: {
-    filename: `${name}.node.js`,
-    path: dist,
-    libraryTarget: 'commonjs2'
-  },
-  plugins: [version, nodeVariant],
-  optimization: { minimize: false }
-}
+// const node = {
+//   ...nodeMin,
+//   output: {
+//     filename: `${name}.node.js`,
+//     path: dist,
+//     libraryTarget: 'commonjs2'
+//   },
+//   plugins: [version, nodeVariant],
+//   optimization: { minimize: false }
+// }
 
 // ------------------------------------------------------------------------------------------------
 // Browser Tests
@@ -233,4 +233,4 @@ const browserTests = {
 
 // ------------------------------------------------------------------------------------------------
 
-module.exports = [browserMin, nodeMin, browser, node, browserTests]
+module.exports = [browserMin, browser, browserTests]

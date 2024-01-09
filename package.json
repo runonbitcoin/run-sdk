@@ -3,7 +3,7 @@
   "version": "0.6.41",
   "description": "Run SDK",
   "license": "MIT",
-  "main": "dist/run.node.min.js",
+  "main": "lib/index.js",
   "browser": "dist/run.browser.min.js",
   "files": [
     "dist/**.min.js"
@@ -11,7 +11,7 @@
   "repository": "git://github.com/runonbitcoin/run.git",
   "scripts": {
     "lint": "standard --fix",
-    "build": "webpack",
+    "build": "env NODE_OPTIONS=--openssl-legacy-provider webpack",
     "test": "env LIB=lib mocha",
     "test:cover": "env LIB=lib env COVER=1 nyc --clean=${CLEAN:=true} -r=text -r=lcovonly -x=test/** mocha",
     "test:node": "webpack && env LIB=dist/run.node.min.js env MANGLED=1 mocha",

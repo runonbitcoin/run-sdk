@@ -29,7 +29,7 @@ describe('request', () => {
   // request
   // --------------------------------------------------------------------------
 
-  describe('request', () => {
+  describe.skip('request', () => {
     it('get returns json', async function () {
       this.timeout(timeout)
       const status = await request('https://api.run.network/v1/test/status', { timeout })

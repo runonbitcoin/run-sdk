@@ -86,19 +86,20 @@ describe('_check', () => {
       testNodeVersion('v14.15.1')
       testNodeVersion('v15.3.0')
       testNodeVersion('v16.1.0')
+      testNodeVersion('v18.12.1')
     })
 
     // ----------------------------------------------------------------------
 
-    it('node > 16 not supported', () => {
-      const error = 'Run is supported only on Node 16 and below'
-      expect(() => testNodeVersion('v17.0.0')).to.throw(error)
+    it('node > 18 not supported', () => {
+      const error = 'Run is supported only from Node 10 to Node 18'
+      expect(() => testNodeVersion('v19.0.0')).to.throw(error)
     })
 
     // ----------------------------------------------------------------------
 
     it('node < 10 not supported', () => {
-      const error = 'Run is supported only on Node 10 and above'
+      const error = 'Run is supported only from Node 10 to Node 18'
       expect(() => testNodeVersion('v9.11.2')).to.throw(error)
       expect(() => testNodeVersion('v8.16.0')).to.throw(error)
     })
