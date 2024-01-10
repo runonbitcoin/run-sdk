@@ -1,7 +1,7 @@
 {
   "name": "@runonbitcoin/run",
-  "version": "0.6.41",
-  "description": "Run SDK",
+  "version": "0.6.42-beta",
+  "description": "Run SDK - GDN fork",
   "license": "MIT",
   "main": "lib/index.js",
   "browser": "dist/run.browser.min.js",
